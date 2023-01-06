@@ -9,6 +9,13 @@ int main() {
     cin >> name >> secondname;
     //getline(cin, name);
     cout << secondname << ", " << name;
+/*
+    string name;
+    string second_name;
+    cin >> name >> second_name;
+    string full_name = second_name + ", "s + name;
+    cout << full_name << endl;
+*/
     return 0;
 }
 

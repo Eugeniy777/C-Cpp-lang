@@ -1,11 +1,12 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 int main() {
     int x, y, z;
     cin >> x >> y >> z;
-    if((x + y)!=z){
+    if(x + y != z){
         cout << "Error. The sum of "s << x << " and "s << y << " is "s << x + y << endl;
         }
     return 0;

@@ -5,10 +5,11 @@
 
 using namespace std;
 
+// разбивает предложение на слова и записывает в вектор
 vector<string> SplitIntoWords(string& text) {
     vector<string> words;
     string word;
-    for (char c : text) {
+    for (const char c : text) {
         if (c == ' ') {
             if (!word.empty()) {
                 words.push_back(word);
@@ -21,9 +22,11 @@ vector<string> SplitIntoWords(string& text) {
     if (!word.empty()) {
         words.push_back(word);
     }
+
     return words;
 }
 
+/* с помощью функции SplitIntoWords (разбивающей предложение на слова и записывающей их в вектор) присваивает слова из вектора в множество стоп-слов */
 set<string> ParseStopWords(string& text) {
     set<string> stop_words;
     for (string& word : SplitIntoWords(text)) {
@@ -32,6 +35,7 @@ set<string> ParseStopWords(string& text) {
     return stop_words;
 }
 
+/* сравнивает исходные слова, присвоенные в вектор(с помощью функции SplitIntoWords) с множеством стоп-слов и записывает очищенное от стоп слов предложение в вектор */
 vector<string> ParseQuery(string& text, set<string>& stop_words) {
     vector<string> words;
     for (string& word : SplitIntoWords(text)) {
@@ -41,6 +45,7 @@ vector<string> ParseQuery(string& text, set<string>& stop_words) {
     }
     return words;
 }
+
 
 int main() {
     // Read stop words

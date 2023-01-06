@@ -8,6 +8,13 @@ int main() {
     string test = " documents found"s;
     test = to_string(a) + test;
     cout << test;
+
+/*
+    int n_docs;
+    cin >> n_docs;
+    string otvet = to_string(n_docs) + " documents found"s;
+    cout << otvet << endl;
+*/
     return 0;
 }
 

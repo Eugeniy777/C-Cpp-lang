@@ -15,6 +15,22 @@ int main() {
     else{
         cout << n;
     }
+
+/*
+    double n, a, b, x, y;
+    cin >> n >> a >> b >> x >> y;
+    if(n > b){
+        n = n - n * (y / 100);
+        cout << n << endl;
+    }
+    else if(n > a){
+        n = n - n * (x / 100);
+        cout << n << endl;
+    }
+    else{
+        cout << n << endl;
+    }
+*/
     return 0;
 }
 
@@ -36,14 +52,19 @@ N — исходная стоимость товара. Число A меньш�
 
 
 /*
-variant 2
+// variant 2
 
     double n, a, b, x, y;
     cin >> n >> a >> b >> x >> y;
-    if (n > b) {
-        n *= 1.0 - y / 100;
-    } else if (n > a) {
-        n *= 1.0 - x / 100;
+    if(n > b){
+        n = n - n * (y / 100);
+        cout << n << endl;
     }
-    cout << n << endl;
+    else if(n > a){
+        n = n - n * (x / 100);
+        cout << n << endl;
+    }
+    else{
+        cout << n << endl;
+    }
 */
