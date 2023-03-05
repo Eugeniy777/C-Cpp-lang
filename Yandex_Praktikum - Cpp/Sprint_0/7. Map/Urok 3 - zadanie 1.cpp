@@ -102,3 +102,60 @@ int main() {
     CheckIsTrue(CheckAnagram("ocean"s, "canoe"s));
 }
 */
+
+
+
+
+/*
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+bool CheckAnagram(const string &s1, const string &s2)
+{
+    int len1 = s1.length();
+    int len2 = s2.length();
+    if (len1 != len2)
+        return false;
+    else
+    {
+        char c;
+        int count1, count2;
+        for (int x = 0; x < len1; x++)
+        {
+            c = s1[x];
+            count1 = 0;
+            count2 = 0;
+            for (int z = 0; z < len1; z++)
+                if (s1[z] == c)
+                    count1++;
+            for (int y = 0; y < len2; y++)
+                if (s2[y] == c)
+                    count2++;
+            if (count1 != count2)
+                return false;
+        }
+    }
+    return true;
+}
+// напишем небольшую функцию для проверки
+void CheckIsTrue(bool value)
+{
+    if (value)
+    {
+        cout << "Test passed :)"s << endl;
+    }
+    else
+    {
+        cout << "Test failed :("s << endl;
+    }
+}
+int main()
+{
+    CheckIsTrue(CheckAnagram("tea"s, "eat"s));
+    CheckIsTrue(!CheckAnagram("battle"s, "beatle"s));
+    CheckIsTrue(!CheckAnagram("lift"s, "elevator"s));
+    CheckIsTrue(CheckAnagram("ocean"s, "canoe"s));
+}
+*/
